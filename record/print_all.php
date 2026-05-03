@@ -386,11 +386,11 @@ if(!$a_role || disp_record($date)) {
                     
                     $pdf->SetXY($x0, $y1);
                     $pdf->Cell(15, $h, "預り金（", 'T', 0, 'L');
-                    $pdf->Cell(20, $h, ($data['money'][0] ? number_format($data['money'][0]) : ""), 'T', 0, 'C');
+                    $pdf->Cell(20, $h, (is_numeric($data['money'][0]) ? number_format($data['money'][0]) : ""), 'T', 0, 'C');
                     $pdf->Cell(24, $h, "円）- 使用金（", 'T', 0, 'L');
-                    $pdf->Cell(20, $h, ($data['money'][1] ? number_format($data['money'][1]) : ""), 'T', 0, 'C');
+                    $pdf->Cell(20, $h, (is_numeric($data['money'][1]) ? number_format($data['money'][1]) : ""), 'T', 0, 'C');
                     $pdf->Cell(25, $h, "円）= おつり（", 'T', 0, 'L');
-                    $pdf->Cell(20.5, $h, ($data['money'][2] ? number_format($data['money'][2]) : ""), 'T', 0, 'C');
+                    $pdf->Cell(20.5, $h, (is_numeric($data['money'][2]) ? number_format($data['money'][2]) : ""), 'T', 0, 'C');
                     $pdf->Cell(10.5, $h, "円）", 'T', 1, 'L');
                     
                     $x2 = $x0 + 135;
@@ -521,7 +521,7 @@ if(!$a_role || disp_record($date)) {
                     
                     $pdf->SetXY($x2, $y1);
                     $pdf->Cell(27, $h, "交通費  ・送迎〔", 0, 0, 'L');
-                    $pdf->Cell(11, $h, ($data['koutsuuhi'][1] ? number_format($data['koutsuuhi'][1]) : ""), 0, 0, 'L');
+                    $pdf->Cell(11, $h, (is_numeric($data['koutsuuhi'][1]) ? number_format($data['koutsuuhi'][1]) : ""), 0, 0, 'L');
                     $pdf->Cell(7, $h, "円〕", 'R', 1, 'L');
                     
                     $y1 = $pdf->GetY();
