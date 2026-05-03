@@ -1,0 +1,358 @@
+@charset "utf-8";
+/* CSS Document */
+
+body {
+	font: 0.7em "メイリオ", "Meiryo", "ヒラギノ角ゴ Pro W3", "Hiragino Kaku Gothic Pro","Osaka", Verdana, "ＭＳ Ｐゴシック", "MS P Gothic", Arial, Helvetica, sans-serif;
+	background: #f2f2f2;
+}
+
+.cf:before,
+.cf:after {
+	content: " ";
+	display: table;
+}
+.cf:after { clear: both; }
+.cf { *zoom: 1; }
+
+a {
+	text-decoration: none;
+	color: #444;
+}
+
+a:hover {
+	text-decoration: underline;
+}
+
+a:visited {
+	color: #444;
+}
+
+table+h3 {
+	margin-top: 10px;
+}
+
+table {
+	border-collapse: collapse;
+}
+
+th, td {
+	border: 1px solid #999;
+	padding: 2px;
+	vertical-align: middle;
+	text-align: center;
+}
+
+.center {
+	text-align: center;
+}
+
+.left {
+	text-align: left;
+}
+
+.right {
+	text-align: right;
+}
+
+ul {
+	list-style: none;
+}
+
+input[type="submit"] {
+	margin: 10px 0;
+}
+
+input.datepicker {
+	width: 80px;
+}
+
+input.w20 {
+	width: 20px !important;
+}
+
+input.w40 {
+	width: 20px !important;
+}
+
+input.w60 {
+	width: 20px !important;
+}
+
+input.w80 {
+	width: 20px !important;
+}
+
+input.w100 {
+	width: 100px !important;
+}
+
+input.w200 {
+	width: 200px !important;
+}
+
+input.w300 {
+	width: 300px !important;
+}
+
+input.w400 {
+	width: 400px !important;
+}
+
+input[type='radio'] {
+	margin-bottom: 3px;
+}
+
+.red {
+	color: red;
+}
+
+.pink, 
+.pink a {
+	color: #f0f;
+}
+
+.blue,
+.blue a {
+	color: #00f;
+}
+
+.td_red {
+	background: #ff9 !important;
+}
+
+.btn_red {
+	background: #f99;
+}
+
+.unclickable {
+	pointer-events: none;
+	color: #999;
+}
+
+#header {
+	background: linear-gradient(left, #e06989, #f2f2f2);
+	background: -moz-linear-gradient(left, #e06989, #f2f2f2);
+	background: -webkit-gradient(linear, left top, right top, from(#e06989), to(#f2f2f2));
+	width: 100%;
+	height: 40px;
+	position: fixed;
+	z-index: 10;
+}
+
+#header h1 {
+	color: #fff;
+	font-size: 15px;
+	padding: 10px;
+}
+
+#header h2 {
+	color: #fff;
+	font-size: 15px;
+	padding: 10px;
+}
+
+#header .menu {
+	float: right;
+}
+
+#header a:hover {
+	text-decoration: underline;
+}
+
+#sub_menu {
+	margin: 20px 0 10px;
+}
+
+#sub_menu li {
+	float: left;
+	margin-right: 10px;
+}
+
+#sub_menu li a {
+	display: block;
+	width: 130px;
+	height: 35px;
+	line-height: 35px;
+	text-align: center;
+	font-size: 14px;
+	font-weight: bold;
+	color: #FFF;
+	background: #eb858b;
+	border-radius: 5px;
+	-webkit-border-radius: 5px;
+	-moz-border-radius: 5px;
+}
+
+#sub_menu li a:hover,
+#sub_menu li a.current {
+	text-decoration: none;
+	background: #e30213;
+}
+
+.main {
+	padding: 50px 20px 20px 20px;
+}
+
+.main h1 {
+	font-size: 15px;
+	background: url(../img/h1.png) no-repeat 10px 8px #fff;
+	border: 3px solid #6c6c6c;
+	padding-top: 5px;
+	padding-left: 35px;
+	margin-bottom: 10px;
+	height: 25px;
+    -webkit-border-radius: 10px;  
+    -moz-border-radius: 10px;  
+}
+
+.main h2 {
+	font-size: 13px;
+	margin-bottom: 10px;
+}
+
+.main th {
+	background: #c2e4e4;
+	text-align: center;
+}
+
+.main td {
+	background: #fff;
+}
+
+button.add {
+	margin-bottom: 10px;
+}
+
+input.time{
+	width: 40px;
+}
+
+.btn_area button.print {
+	position: absolute;
+	left: 75px;
+}
+
+.btn_area button.print_all {
+	margin-top: 10px;
+	left: 427px;
+}
+
+.btn_area input,
+.btn_area button {
+	margin-top: 0;
+}
+
+.btn_area input[type="checkbox"] {
+	margin-bottom: 0;
+}
+
+.record input[name="search"] {
+	margin: 0 !important;
+}
+
+/* ログイン */
+#form_area {
+	border: 3px solid #9f9f9f;
+	background: #fff;
+	margin: 10px;
+	padding: 20px;
+	height: 200px;
+}
+
+#form_area div {
+	margin-bottom: 10px;
+}
+
+.block {
+	display: table-cell;
+	vertical-align: top;
+	position: relative;
+}
+
+.block + .block {
+	padding-left: 40px;
+}
+
+.block .btn_area button.print {
+    left: 90px;
+}
+
+table input[type="submit"] {
+	margin: 0;
+}
+
+.block + .block table {
+	display: block;
+	margin-left: 0;
+	padding-left: 0;
+}
+
+.block + .block table + table {
+	margin-top: 20px;
+}
+
+.shift_table {
+	margin-bottom: 10px;
+}
+
+table caption {
+	text-align: left;
+}
+
+.shift_table input + select {
+	margin-left: 4px;
+}
+
+.shift_table select + select {
+	margin: 0 4px;
+}
+
+.regular {
+    display: inline-block;
+	width: 27px;
+}
+
+.shift_row {
+	display: block;
+}
+
+.shift_table .shift_row + .shift_row {
+	margin-top: 3px;
+}
+
+.cancel {
+	text-decoration: line-through red;
+}
+
+.shift_table2 th {
+	width: 80px;
+}
+
+.shift_table2 td {
+	width: 200px;
+}
+
+.day_off {
+	background: #ddd !important;
+}
+
+.record table {
+	width: 100%;
+}
+
+.record .form_table td {
+	text-align: left;
+}
+
+.record .form_table input[type="number"] {
+	width: 60px;
+	text-align: right;
+}
+
+.record .form_table {
+	margin-bottom: 20px;
+}
+
+.record textarea {
+	width: 95%;
+}
