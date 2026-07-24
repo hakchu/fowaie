@@ -13,7 +13,7 @@ list($year, $month, $day) = explode("-", $date);
 $month = intval($month);
 
 if(isset($_POST['submit'])) {
-	for($i = 0; $i < count($_POST['shift_staff_id']); $i++) {
+	for($i = 0; $i < count($_POST['shift_staff_id'] ?? []); $i++) {
 		$shift_staff_id = $_POST['shift_staff_id'][$i];
 		$shift_user_id = $_POST['shift_user_id'][$i];
 		$staff_id_1 = $_POST['staff_id_1'][$i] ? $_POST['staff_id_1'][$i] : 0;
@@ -29,7 +29,7 @@ if(isset($_POST['submit'])) {
 		}
 	}
 
-	for($i = 0; $i < count($_POST['other_staff_id']); $i++) {
+	for($i = 0; $i < count($_POST['other_staff_id'] ?? []); $i++) {
 		$shift_staff_id = $_POST['other_shift_id'][$i];
 		$staff_id_1 = $_POST['other_staff_id'][$i] ? $_POST['other_staff_id'][$i] : 0;
 		$staff_start = $_POST['other_start'][$i];

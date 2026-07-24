@@ -21,11 +21,13 @@ if(isset($_POST['submit'])) {
 		$mobile = $_POST['mobile'];
 		$fax = $_POST['fax'];
 		$mail = $_POST['mail'];
-		for($i = 0; $i < count($_POST['disability']); $i++) {
+		$disability = array();
+		for($i = 0; $i < count($_POST['disability'] ?? []); $i++) {
 			$disability[$i] = $_POST['disability'][$i];
 		}
 		$disability_en = str_replace("\\", "\\\\", json_encode($disability));
-		for($i = 0; $i < count($_POST['tool']); $i++) {
+		$tool = array();
+		for($i = 0; $i < count($_POST['tool'] ?? []); $i++) {
 			$tool[$i] = $_POST['tool'][$i];
 		}
 		$tool_en = str_replace("\\", "\\\\", json_encode($tool));
@@ -34,7 +36,8 @@ if(isset($_POST['submit'])) {
 		$register = $_POST['register'];
 		$notes = $_POST['notes'];
 
-		for($i = 0; $i < count($_POST['emergency']); $i++) {
+		$emergency = array();
+		for($i = 0; $i < count($_POST['emergency'] ?? []); $i++) {
 			$emergency[$i][0] = $_POST['emergency'][$i][0];
 			$emergency[$i][1] = $_POST['emergency'][$i][1];
 			$emergency[$i][2] = intval($_POST['emergency'][$i][2]);
@@ -45,7 +48,8 @@ if(isset($_POST['submit'])) {
 		}
 		$emergency_en = str_replace("\\", "\\\\", json_encode($emergency));
 
-		for($i = 0; $i < count($_POST['cooperation']); $i++) {
+		$cooperation = array();
+		for($i = 0; $i < count($_POST['cooperation'] ?? []); $i++) {
 			$cooperation[$i][0] = $_POST['cooperation'][$i][0];
 			$cooperation[$i][1] = $_POST['cooperation'][$i][1];
 			$cooperation[$i][2] = $_POST['cooperation'][$i][2];
@@ -54,7 +58,8 @@ if(isset($_POST['submit'])) {
 		}
 		$cooperation_en = str_replace("\\", "\\\\", json_encode($cooperation));
 
-		for($i = 0; $i < count($_POST['medical']); $i++) {
+		$medical = array();
+		for($i = 0; $i < count($_POST['medical'] ?? []); $i++) {
 			$medical[$i][0] = $_POST['medical'][$i][0];
 			$medical[$i][1] = $_POST['medical'][$i][1];
 			$medical[$i][2] = $_POST['medical'][$i][2];

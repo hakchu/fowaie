@@ -12,7 +12,7 @@ $date = $ym.'-01';
 $n_day = date('d', mktime(0, 0, 0, $month + 1, 0, $year));
 
 if(isset($_POST['submit'])) {
-	for($i = 0; $i < count($_POST['shift_staff_id']); $i++) {
+	for($i = 0; $i < count($_POST['shift_staff_id'] ?? []); $i++) {
 		$shift_staff_id = $_POST['shift_staff_id'][$i];
 		$foyer = isset($_POST['foyer'][$i]) ? 1 : 0;
 		$res_shift_staff = $mysqli->query("SELECT * FROM shift_staff WHERE shift_staff_id=$shift_staff_id");
@@ -23,7 +23,6 @@ if(isset($_POST['submit'])) {
 				$mysqli->query("UPDATE shift_staff SET foyer_2=$foyer WHERE shift_staff_id=$shift_staff_id");
 			}
 		}
-		$mysqli->query("UPDATE shift_user SET cancel=$cancel WHERE shift_user_id=$shift_user_id");
 	}
 
     echo '<script>location.href="'.$_SERVER['PHP_SELF'].'?year='.$year.'&month='.$month.'&staff_id='.$staff_id.'";</script>';

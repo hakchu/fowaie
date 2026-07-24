@@ -12,7 +12,7 @@ $date = $ym.'-01';
 $n_day = date('d', mktime(0, 0, 0, $month + 1, 0, $year));
 
 if(isset($_POST['submit'])) {
-	for($i = 0; $i < count($_POST['shift_user_id']); $i++) {
+	for($i = 0; $i < count($_POST['shift_user_id'] ?? []); $i++) {
 		$shift_user_id = $_POST['shift_user_id'][$i];
 		$cancel = $_POST['cancel'][$i];
 		$mysqli->query("UPDATE shift_user SET cancel=$cancel WHERE shift_user_id=$shift_user_id");
